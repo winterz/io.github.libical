@@ -9,25 +9,17 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = "Update the public API documentation."
+lead = "Update the Website and public API documentation."
 toc = true
 top = false
 +++
 
-Make sure you have Doxygen installed; else this will fail.
+Clone the website:
 
-Like so:
-
-```bash
-git checkout 3.0 #your stable branch
-mkdir build-apidox; cd build-apidox
-cmake -G Ninja .. && ninja docs
-git checkout gh-pages
-cd ..; rm -rf apidocs; cp -dpr build-apidox/apidocs/html apidocs
-git add apidocs #make sure to include any newly generated files
-git commit -m "update apidox" --no-verify . && git push
+```
+git clone https://github.com/libical/io.github.libical.git
 ```
 
-view it on [https://libical.github.io/docs/developer/libical/](@/docs/developer/libical.md) (might take a couple minutes to update)
-
-add the generated `build-apidox/libical.tag` file to the github release
+Open the file in `.github/workflows/main.yml` and update `LATEST_VERSION` to the
+new version. Commit and push to the repository to trigger a website and
+documentation update.
