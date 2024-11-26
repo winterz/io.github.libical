@@ -9,7 +9,7 @@ url = "/docs/getting-started/introduction/"
 url_button = "Get started"
 repo_version = "v3.0.18"
 repo_license = "MPL v2.0 or LGPL v2.1 —"
-repo_url = "https://github.com/aaranxu/adidoks"
+repo_url = "https://github.com/libical/libical/"
 
 # Menu items
 [[extra.menu.main]]
